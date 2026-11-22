@@ -1,0 +1,8 @@
+# Vitesse moyenne et distance de chaque édition de plusieurs courses
+SELECT ?race ?ed ?date ?km ?speed WHERE {
+  VALUES ?race { {{IDS}} }
+  ?ed wdt:P31 ?race.
+  OPTIONAL { ?ed wdt:P580|wdt:P585 ?date }
+  OPTIONAL { ?ed p:P3157/psn:P3157/wikibase:quantityAmount ?km }
+  OPTIONAL { ?ed p:P2052/psn:P2052/wikibase:quantityAmount ?speed }
+}

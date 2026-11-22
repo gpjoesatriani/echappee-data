@@ -1,0 +1,7 @@
+# Lauréats des différents classements (maillots, combativité, équipes…)
+SELECT ?c ?cLabel ?w ?wLabel ?iso WHERE {
+  wd:{{ID}} p:P1346 ?s. ?s ps:P1346 ?w.
+  OPTIONAL { ?s pq:P2501 ?c }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

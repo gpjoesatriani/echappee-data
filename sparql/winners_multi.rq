@@ -1,0 +1,11 @@
+# Podiums de plusieurs courses (records et anecdotes transversales)
+SELECT ?race ?ed ?date ?c ?w ?wLabel ?wBirth ?iso WHERE {
+  VALUES ?race { {{IDS}} }
+  ?ed wdt:P31 ?race; p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 ?c.
+  FILTER(?c IN (wd:Q20882667, wd:Q20882668, wd:Q20882669))
+  ?w wdt:P31 wd:Q5.
+  OPTIONAL { ?ed wdt:P580|wdt:P585 ?date }
+  OPTIONAL { ?w wdt:P569 ?wBirth }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

@@ -1,0 +1,11 @@
+# Victoires d'étapes sur les Grands Tours, par coureur
+SELECT ?w ?wLabel ?tdf ?giro ?vuelta ?n ?iso WHERE {
+  { SELECT ?w (SUM(IF(?race = wd:Q33881, 1, 0)) AS ?tdf) (SUM(IF(?race = wd:Q33861, 1, 0)) AS ?giro)
+           (SUM(IF(?race = wd:Q33937, 1, 0)) AS ?vuelta) (COUNT(DISTINCT ?st) AS ?n) WHERE {
+      VALUES ?race { wd:Q33881 wd:Q33861 wd:Q33937 }
+      ?ed wdt:P31 ?race; wdt:P527 ?st. ?st p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882747.
+      ?w wdt:P31 wd:Q5.
+    } GROUP BY ?w ORDER BY DESC(?n) LIMIT 50 }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY DESC(?n)

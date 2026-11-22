@@ -1,0 +1,9 @@
+# Classement (général d'une édition, ou d'une étape)
+SELECT ?r ?rLabel ?rank ?time ?gap ?iso WHERE {
+  wd:{{ID}} p:P2321 ?s. ?s ps:P2321 ?r.
+  OPTIONAL { ?s pq:P1352 ?rank }
+  OPTIONAL { ?s pqn:P2781/wikibase:quantityAmount ?time }
+  OPTIONAL { ?s pqn:P2911/wikibase:quantityAmount ?gap }
+  OPTIONAL { ?r wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

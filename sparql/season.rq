@@ -1,0 +1,7 @@
+# Une saison d'équipe : coureurs et victoires
+SELECT ?kind ?x ?xLabel ?date ?iso WHERE {
+  { wd:{{ID}} wdt:P527 ?x. BIND("rider" AS ?kind) OPTIONAL { ?x wdt:P27/wdt:P297 ?iso } }
+  UNION
+  { wd:{{ID}} wdt:P2522 ?x. BIND("win" AS ?kind) OPTIONAL { ?x wdt:P585|wdt:P580 ?date } }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

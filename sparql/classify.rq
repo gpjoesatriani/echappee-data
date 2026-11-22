@@ -1,0 +1,10 @@
+# Classe les résultats de recherche : coureur, équipe, course, édition
+SELECT ?x ?kind ?img WHERE {
+  VALUES ?x { {{IDS}} }
+  OPTIONAL { ?x wdt:P18 ?img }
+  { ?x wdt:P106 wd:Q2309784. BIND("rider" AS ?kind) }
+  UNION { ?x wdt:P31/wdt:P279* wd:Q20639847. BIND("team" AS ?kind) }
+  UNION { ?x wdt:P31 wd:Q6154783. BIND("team" AS ?kind) }
+  UNION { ?x wdt:P641 wd:Q3609. FILTER EXISTS { ?ed wdt:P31 ?x. ?ed wdt:P1346 ?any } BIND("race" AS ?kind) }
+  UNION { ?x wdt:P31 ?r. ?r wdt:P641 wd:Q3609. FILTER EXISTS { ?x wdt:P1346 ?w } BIND("edition" AS ?kind) }
+}

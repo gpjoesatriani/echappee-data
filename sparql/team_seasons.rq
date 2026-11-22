@@ -1,0 +1,11 @@
+# Saisons d'une équipe : nom de l'année, victoires, effectif
+SELECT ?season ?seasonLabel ?y ?name ?wins ?riders WHERE {
+  { SELECT ?season (SAMPLE(?yy) AS ?y) (COUNT(DISTINCT ?v) AS ?wins) (COUNT(DISTINCT ?r) AS ?riders) WHERE {
+      ?season wdt:P5138 wd:{{ID}}.
+      OPTIONAL { ?season wdt:P580|wdt:P585 ?d BIND(YEAR(?d) AS ?yy) }
+      OPTIONAL { ?season wdt:P2522 ?v }
+      OPTIONAL { ?season wdt:P527 ?r }
+    } GROUP BY ?season }
+  OPTIONAL { ?season wdt:P1448 ?name }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY DESC(?y)

@@ -1,0 +1,7 @@
+# Équipes au départ d'une édition
+SELECT ?season ?seasonLabel ?team ?iso WHERE {
+  wd:{{ID}} wdt:P1923 ?season.
+  OPTIONAL { ?season wdt:P5138 ?team }
+  OPTIONAL { ?season wdt:P17/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

@@ -1,0 +1,7 @@
+# Participations d'un coureur, par course
+SELECT ?race ?raceLabel ?n WHERE {
+  { SELECT ?race (COUNT(DISTINCT ?ed) AS ?n) WHERE {
+      ?ed wdt:P710 wd:{{ID}}; wdt:P31 ?race. ?race wdt:P641 wd:Q3609.
+    } GROUP BY ?race }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY DESC(?n)

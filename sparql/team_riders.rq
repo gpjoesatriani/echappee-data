@@ -1,0 +1,7 @@
+# Tous les coureurs passés par l'équipe
+SELECT ?r ?rLabel ?start ?end ?iso WHERE {
+  ?r p:P54 ?s. ?s ps:P54 wd:{{ID}}.
+  OPTIONAL { ?s pq:P580 ?start } OPTIONAL { ?s pq:P582 ?end }
+  OPTIONAL { ?r wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

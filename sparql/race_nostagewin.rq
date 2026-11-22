@@ -1,0 +1,8 @@
+# Vainqueurs du général sans la moindre victoire d'étape
+SELECT ?ed ?edLabel ?w ?wLabel WHERE {
+  ?ed wdt:P31 wd:{{ID}}; p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882667.
+  ?w wdt:P31 wd:Q5.
+  FILTER EXISTS { ?ed wdt:P527 ?any. ?any p:P1346/pq:P2501 wd:Q20882747 }
+  FILTER NOT EXISTS { ?ed wdt:P527 ?st. ?st p:P1346 ?s2. ?s2 ps:P1346 ?w; pq:P2501 wd:Q20882747 }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

@@ -1,0 +1,12 @@
+# Étapes d'une édition : numéro, date, départ, arrivée, distance, type, vainqueur
+SELECT ?st ?stLabel ?num ?date ?fromLabel ?toLabel ?km ?type ?w ?wLabel ?iso WHERE {
+  wd:{{ID}} wdt:P527 ?st.
+  OPTIONAL { ?st wdt:P1545 ?num }
+  OPTIONAL { ?st wdt:P585 ?date }
+  OPTIONAL { ?st wdt:P1427 ?from }
+  OPTIONAL { ?st wdt:P1444 ?to }
+  OPTIONAL { ?st p:P3157/psn:P3157/wikibase:quantityAmount ?km }
+  OPTIONAL { ?st wdt:P31 ?type FILTER(?type != wd:Q18131152) }
+  OPTIONAL { ?st p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882747. OPTIONAL { ?w wdt:P27/wdt:P297 ?iso } }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

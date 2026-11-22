@@ -1,0 +1,7 @@
+# Champions du monde sur route (course en ligne masculine)
+SELECT ?ed ?date ?w ?wLabel ?iso WHERE {
+  ?ed wdt:P31 wd:Q13603535; p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882667.
+  OPTIONAL { ?ed wdt:P580|wdt:P585 ?date }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

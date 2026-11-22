@@ -1,0 +1,7 @@
+# Classements d'un coureur sur les courses (place au général ou à l'arrivée)
+SELECT ?ed ?edLabel ?race ?raceLabel ?rank ?date WHERE {
+  ?ed p:P2321 ?s. ?s ps:P2321 wd:{{ID}}; pq:P1352 ?rank.
+  ?ed wdt:P31 ?race. ?race wdt:P641 wd:Q3609.
+  OPTIONAL { ?ed wdt:P580|wdt:P585 ?date }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

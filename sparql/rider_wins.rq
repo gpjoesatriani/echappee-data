@@ -1,0 +1,11 @@
+# Tout ce qu'un coureur a gagné ou décroché (victoires, podiums, maillots)
+SELECT ?ev ?evLabel ?date ?c ?cLabel ?ed ?race0 ?race0Label ?race1 ?race1Label ?type ?multi WHERE {
+  ?ev p:P1346 ?s. ?s ps:P1346 wd:{{ID}}.
+  OPTIONAL { ?s pq:P2501 ?c }
+  BIND(EXISTS { ?ev wdt:P527 ?part } AS ?multi)
+  OPTIONAL { ?ev wdt:P585|wdt:P580 ?date }
+  OPTIONAL { ?ev wdt:P31 ?race0 }
+  OPTIONAL { ?ev wdt:P361 ?ed. ?ed wdt:P31 ?race1. ?race1 wdt:P641 wd:Q3609 }
+  OPTIONAL { ?ev wdt:P31 ?type FILTER(?type IN (wd:Q20646667, wd:Q20646668, wd:Q2266066, wd:Q20646670, wd:Q2348250, wd:Q20680270, wd:Q485321, wd:Q20679712)) }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

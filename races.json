@@ -1,0 +1,543 @@
+{
+ "season": 2027,
+ "sources": [
+  "velo101.com",
+  "domestiquecycling.com"
+ ],
+ "races": [
+  {
+   "id": "tdu",
+   "name": "Tour Down Under",
+   "start": "2027-01-19",
+   "end": "2027-01-24",
+   "country": "AU",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q756827"
+  },
+  {
+   "id": "cadel",
+   "name": "Cadel Evans Great Ocean Road Race",
+   "start": "2027-01-31",
+   "end": null,
+   "country": "AU",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q18708418"
+  },
+  {
+   "id": "uae",
+   "name": "UAE Tour",
+   "start": "2027-02-15",
+   "end": "2027-02-21",
+   "country": "AE",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q57775410"
+  },
+  {
+   "id": "omloop",
+   "name": "Omloop Nieuwsblad",
+   "start": "2027-02-27",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q506447"
+  },
+  {
+   "id": "strade",
+   "name": "Strade Bianche",
+   "start": "2027-03-06",
+   "end": null,
+   "country": "IT",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "2e en 2026",
+   "note": null,
+   "qid": "Q1359051"
+  },
+  {
+   "id": "parisnice",
+   "name": "Paris-Nice",
+   "start": "2027-03-07",
+   "end": "2027-03-14",
+   "country": "FR",
+   "category": "STAGE_RACE",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q487654"
+  },
+  {
+   "id": "tirreno",
+   "name": "Tirreno-Adriatico",
+   "start": "2027-03-08",
+   "end": "2027-03-14",
+   "country": "IT",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q488036"
+  },
+  {
+   "id": "msr",
+   "name": "Milan-San Remo",
+   "start": "2027-03-20",
+   "end": null,
+   "country": "IT",
+   "category": "MONUMENT",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q33951"
+  },
+  {
+   "id": "catalunya",
+   "name": "Tour de Catalogne",
+   "start": "2027-03-22",
+   "end": "2027-03-28",
+   "country": "ES",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q755125"
+  },
+  {
+   "id": "bruges",
+   "name": "Ronde van Brugge (ex-Brugge-De Panne)",
+   "start": "2027-03-24",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q1257167"
+  },
+  {
+   "id": "e3",
+   "name": "E3 Saxo Classic",
+   "start": "2027-03-26",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q599219"
+  },
+  {
+   "id": "gw",
+   "name": "Gand-Wevelgem",
+   "start": "2027-03-28",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q498661"
+  },
+  {
+   "id": "dwars",
+   "name": "À travers la Flandre",
+   "start": "2027-03-31",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q1368083"
+  },
+  {
+   "id": "rvv",
+   "name": "Tour des Flandres",
+   "start": "2027-04-04",
+   "end": null,
+   "country": "BE",
+   "category": "MONUMENT",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q33970"
+  },
+  {
+   "id": "itzulia",
+   "name": "Tour du Pays basque",
+   "start": "2027-04-05",
+   "end": "2027-04-10",
+   "country": "ES",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "Vainqueur en 2026, avec 3 étapes et tous les maillots annexes",
+   "note": null,
+   "qid": "Q181266"
+  },
+  {
+   "id": "roubaix",
+   "name": "Paris-Roubaix",
+   "start": "2027-04-11",
+   "end": null,
+   "country": "FR",
+   "category": "MONUMENT",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q33992"
+  },
+  {
+   "id": "amstel",
+   "name": "Amstel Gold Race",
+   "start": "2027-04-18",
+   "end": null,
+   "country": "NL",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q478174"
+  },
+  {
+   "id": "fleche",
+   "name": "Flèche wallonne",
+   "start": "2027-04-21",
+   "end": null,
+   "country": "BE",
+   "category": "CLASSIC",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "Vainqueur en 2026",
+   "note": null,
+   "qid": "Q499192"
+  },
+  {
+   "id": "lbl",
+   "name": "Liège-Bastogne-Liège",
+   "start": "2027-04-25",
+   "end": null,
+   "country": "BE",
+   "category": "MONUMENT",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "2e en 2026",
+   "note": null,
+   "qid": "Q34009"
+  },
+  {
+   "id": "romandie",
+   "name": "Tour de Romandie",
+   "start": "2027-04-27",
+   "end": "2027-05-02",
+   "country": "CH",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q487973"
+  },
+  {
+   "id": "eschborn",
+   "name": "Eschborn-Francfort",
+   "start": "2027-05-02",
+   "end": null,
+   "country": "DE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q570529"
+  },
+  {
+   "id": "giro",
+   "name": "Tour d'Italie",
+   "start": "2027-05-08",
+   "end": "2027-05-30",
+   "country": "IT",
+   "category": "GRAND_TOUR",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q33861"
+  },
+  {
+   "id": "aura",
+   "name": "Tour Auvergne-Rhône-Alpes (ex-Dauphiné)",
+   "start": "2027-06-06",
+   "end": "2027-06-13",
+   "country": "FR",
+   "category": "STAGE_RACE",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "8e du Dauphiné en 2025 · abandon en 2026",
+   "note": "L'ancien Critérium du Dauphiné.",
+   "qid": "Q655150"
+  },
+  {
+   "id": "copenhagen",
+   "name": "Copenhagen Sprint",
+   "start": "2027-06-13",
+   "end": null,
+   "country": "DK",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q123813138"
+  },
+  {
+   "id": "suisse",
+   "name": "Tour de Suisse",
+   "start": "2027-06-16",
+   "end": "2027-06-20",
+   "country": "CH",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q83261"
+  },
+  {
+   "id": "tdf",
+   "name": "Tour de France",
+   "start": "2027-07-02",
+   "end": "2027-07-25",
+   "country": "FR",
+   "category": "GRAND_TOUR",
+   "tv": [
+    "France 2 / France 3",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "4e en 2026 pour sa première participation",
+   "note": "Grand Départ d'Édimbourg (Écosse).",
+   "qid": "Q33881"
+  },
+  {
+   "id": "sansebastian",
+   "name": "Classique de Saint-Sébastien",
+   "start": "2027-07-31",
+   "end": null,
+   "country": "ES",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q740787"
+  },
+  {
+   "id": "pologne",
+   "name": "Tour de Pologne",
+   "start": "2027-08-02",
+   "end": "2027-08-08",
+   "country": "PL",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q549121"
+  },
+  {
+   "id": "hamburg",
+   "name": "Cyclassics Hambourg",
+   "start": "2027-08-15",
+   "end": null,
+   "country": "DE",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q160683"
+  },
+  {
+   "id": "renewi",
+   "name": "Renewi Tour",
+   "start": "2027-08-18",
+   "end": "2027-08-22",
+   "country": "BE",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q670258"
+  },
+  {
+   "id": "bretagne",
+   "name": "Bretagne Classic",
+   "start": "2027-08-22",
+   "end": null,
+   "country": "FR",
+   "category": "CLASSIC",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q287950"
+  },
+  {
+   "id": "mondiaux",
+   "name": "Super Mondiaux Haute-Savoie Mont-Blanc",
+   "start": "2027-08-24",
+   "end": "2027-09-05",
+   "country": "FR",
+   "category": "CHAMPIONSHIP",
+   "tv": [
+    "France TV",
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "Bronze du contre-la-montre aux Mondiaux 2026",
+   "note": "Course en ligne hommes élite le 29 août, femmes élite le 5 septembre.",
+   "qid": "Q13603535"
+  },
+  {
+   "id": "vuelta",
+   "name": "Tour d'Espagne",
+   "start": "2027-09-04",
+   "end": "2027-09-26",
+   "country": "ES",
+   "category": "GRAND_TOUR",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q33937"
+  },
+  {
+   "id": "quebec",
+   "name": "Grand Prix de Québec",
+   "start": "2027-09-10",
+   "end": null,
+   "country": "CA",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "17e en 2026",
+   "note": null,
+   "qid": "Q392369"
+  },
+  {
+   "id": "montreal",
+   "name": "Grand Prix de Montréal",
+   "start": "2027-09-12",
+   "end": null,
+   "country": "CA",
+   "category": "CLASSIC",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "2e en 2026",
+   "note": null,
+   "qid": "Q392389"
+  },
+  {
+   "id": "lombardia",
+   "name": "Tour de Lombardie",
+   "start": "2027-10-09",
+   "end": null,
+   "country": "IT",
+   "category": "MONUMENT",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": "Vainqueur en 2026 · 7e en 2025",
+   "note": null,
+   "qid": "Q34032"
+  },
+  {
+   "id": "guangxi",
+   "name": "Tour du Guangxi",
+   "start": "2027-10-12",
+   "end": "2027-10-17",
+   "country": "CN",
+   "category": "STAGE_RACE",
+   "tv": [
+    "Eurosport / HBO Max"
+   ],
+   "seixas": null,
+   "note": null,
+   "qid": "Q27997365"
+  }
+ ],
+ "history": [
+  {
+   "qid": "Q499337",
+   "name": "Paris-Tours",
+   "category": "CLASSIC",
+   "country": "FR"
+  }
+ ]
+}

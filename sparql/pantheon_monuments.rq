@@ -1,0 +1,12 @@
+# Victoires sur les cinq Monuments, par coureur
+SELECT ?w ?wLabel ?msr ?rvv ?pr ?lbl ?lom ?n ?iso WHERE {
+  { SELECT ?w (SUM(IF(?race = wd:Q33951, 1, 0)) AS ?msr) (SUM(IF(?race = wd:Q33970, 1, 0)) AS ?rvv)
+           (SUM(IF(?race = wd:Q33992, 1, 0)) AS ?pr) (SUM(IF(?race = wd:Q34009, 1, 0)) AS ?lbl)
+           (SUM(IF(?race = wd:Q34032, 1, 0)) AS ?lom) (COUNT(DISTINCT ?ed) AS ?n) WHERE {
+      VALUES ?race { wd:Q33951 wd:Q33970 wd:Q33992 wd:Q34009 wd:Q34032 }
+      ?ed wdt:P31 ?race; p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882667.
+      ?w wdt:P31 wd:Q5.
+    } GROUP BY ?w }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY DESC(?n)

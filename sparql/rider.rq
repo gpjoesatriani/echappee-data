@@ -1,0 +1,17 @@
+# Fiche d'identité d'un coureur
+SELECT ?label ?desc ?img ?birth ?birthPlaceLabel ?death ?deathPlaceLabel ?iso ?countryLabel ?height ?weight ?nick ?title WHERE {
+  BIND(wd:{{ID}} AS ?x)
+  OPTIONAL { ?x rdfs:label ?label FILTER(LANG(?label) = "fr") }
+  OPTIONAL { ?x schema:description ?desc FILTER(LANG(?desc) = "fr") }
+  OPTIONAL { ?x wdt:P18 ?img }
+  OPTIONAL { ?x wdt:P569 ?birth }
+  OPTIONAL { ?x wdt:P19 ?birthPlace }
+  OPTIONAL { ?x wdt:P570 ?death }
+  OPTIONAL { ?x wdt:P20 ?deathPlace }
+  OPTIONAL { ?x wdt:P27 ?country. OPTIONAL { ?country wdt:P297 ?iso } }
+  OPTIONAL { ?x p:P2048/psn:P2048/wikibase:quantityAmount ?height }
+  OPTIONAL { ?x p:P2067/psn:P2067/wikibase:quantityAmount ?weight }
+  OPTIONAL { ?x wdt:P1449 ?nick FILTER(LANG(?nick) = "fr") }
+  OPTIONAL { ?a schema:about ?x; schema:isPartOf <https://fr.wikipedia.org/>; schema:name ?title }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} LIMIT 1

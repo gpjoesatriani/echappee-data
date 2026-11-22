@@ -1,0 +1,6 @@
+# Nationalité de plusieurs coureurs : nationalité sportive d'abord, puis citoyenneté
+SELECT ?p ?s ?sIso ?c ?cIso WHERE {
+  VALUES ?p { {{IDS}} }
+  OPTIONAL { ?p wdt:P1532 ?s. OPTIONAL { ?s wdt:P297 ?sIso } }
+  OPTIONAL { ?p wdt:P27 ?c. OPTIONAL { ?c wdt:P297 ?cIso } }
+}

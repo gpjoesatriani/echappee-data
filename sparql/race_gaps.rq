@@ -1,0 +1,6 @@
+# Écart entre le vainqueur et le 2e, pour chaque édition
+SELECT ?ed ?gap WHERE {
+  ?ed wdt:P31 wd:{{ID}}; p:P2321 ?s.
+  ?s pq:P1352 ?rk; pqn:P2911/wikibase:quantityAmount ?gap.
+  FILTER(?rk = 2)
+}

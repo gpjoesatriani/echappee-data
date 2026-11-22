@@ -1,0 +1,17 @@
+# Toutes les éditions d'une course, avec podium et maillots
+SELECT ?ed ?edLabel ?date ?km ?speed ?stages ?c ?w ?wLabel ?wBirth ?wIso WHERE {
+  { SELECT ?ed (SAMPLE(?d0) AS ?date) (SAMPLE(?m) AS ?km) (MAX(?s) AS ?speed) (COUNT(DISTINCT ?st) AS ?stages) WHERE {
+      ?ed wdt:P31 wd:{{ID}}.
+      OPTIONAL { ?ed wdt:P580|wdt:P585 ?d0 }
+      OPTIONAL { ?ed p:P3157/psn:P3157/wikibase:quantityAmount ?m }
+      OPTIONAL { ?ed p:P2052/psn:P2052/wikibase:quantityAmount ?s }
+      OPTIONAL { ?ed wdt:P527 ?st }
+    } GROUP BY ?ed }
+  OPTIONAL {
+    ?ed p:P1346 ?ws. ?ws ps:P1346 ?w; pq:P2501 ?c.
+    FILTER(?c IN (wd:Q20882667, wd:Q20882668, wd:Q20882669, wd:Q20883007, wd:Q20883212, wd:Q20883139))
+    OPTIONAL { ?w wdt:P569 ?wBirth }
+    OPTIONAL { ?w wdt:P27/wdt:P297 ?wIso }
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+}

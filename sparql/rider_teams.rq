@@ -1,0 +1,6 @@
+# Équipes successives d'un coureur
+SELECT ?team ?teamLabel ?start ?end WHERE {
+  wd:{{ID}} p:P54 ?s. ?s ps:P54 ?team.
+  OPTIONAL { ?s pq:P580 ?start } OPTIONAL { ?s pq:P582 ?end }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY ?start

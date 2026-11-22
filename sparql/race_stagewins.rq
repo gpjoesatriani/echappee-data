@@ -1,0 +1,9 @@
+# Classement des vainqueurs d'étapes sur toute l'histoire d'une course
+SELECT ?w ?wLabel ?n ?iso WHERE {
+  { SELECT ?w (COUNT(DISTINCT ?stage) AS ?n) WHERE {
+      ?ed wdt:P31 wd:{{ID}}; wdt:P527 ?stage.
+      ?stage p:P1346 ?s. ?s ps:P1346 ?w; pq:P2501 wd:Q20882747.
+    } GROUP BY ?w ORDER BY DESC(?n) LIMIT 40 }
+  OPTIONAL { ?w wdt:P27/wdt:P297 ?iso }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en,mul,it,es,nl,de,pt". }
+} ORDER BY DESC(?n)

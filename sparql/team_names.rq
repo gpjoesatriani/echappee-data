@@ -1,0 +1,5 @@
+# Noms officiels successifs d'une équipe
+SELECT ?name ?start ?end WHERE {
+  wd:{{ID}} p:P1448 ?s. ?s ps:P1448 ?name.
+  OPTIONAL { ?s pq:P580 ?start } OPTIONAL { ?s pq:P582 ?end }
+} ORDER BY ?start
