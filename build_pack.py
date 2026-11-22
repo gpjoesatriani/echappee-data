@@ -144,6 +144,14 @@ def summary(old: dict) -> list[str]:
     return lines or ["Classements et fiches actualisés"]
 
 
+def fingerprint(pack: dict) -> str:
+    """Le serveur peut renvoyer les lignes dans un autre ordre : ce n'est pas une nouveauté."""
+    entries = {k: [v["v"], sorted(json.dumps(r, ensure_ascii=False) for r in v["r"])]
+               for k, v in pack.get("entries", {}).items()}
+    canon = json.dumps([entries, pack.get("index"), pack.get("nat")], ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(canon.encode("utf-8")).hexdigest()
+
+
 def main() -> int:
     old_pack, version = previous_pack()
     old = old_pack.get("entries", {})
@@ -220,9 +228,7 @@ def main() -> int:
     for k in [k for k, v in results.items() if not v["r"]]:
         del results[k]
     body ={"entries": results, "index": sorted(index.values(), key=lambda x: x[0]), "nat": dict(sorted(nat.items()))}
-    canon = json.dumps(body, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-    was = {k: old_pack.get(k) for k in ("entries", "index", "nat")}
-    if old_pack and json.dumps(was, ensure_ascii=False, sort_keys=True, separators=(",", ":")) == canon:
+    if old_pack and fingerprint(old_pack) == fingerprint(body):
         print("Rien de nouveau.", flush=True)
         return 0
 

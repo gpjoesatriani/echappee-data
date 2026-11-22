@@ -190,7 +190,10 @@ def run_batch(name: str, ids: list[str]) -> dict[str, dict]:
     for r in raw:
         i = r.get("_id")
         if i in out:
-            if name in ("header", "rider") and out[i]["r"]:
-                continue  # LIMIT 1 d'origine
-            out[i]["r"].append([r.get(v) for v in vars_])
+            row = [r.get(v) for v in vars_]
+            if name in ("header", "rider"):  # LIMIT 1 d'origine : toujours la même ligne, d'un jour à l'autre
+                if not out[i]["r"] or json.dumps(row) < json.dumps(out[i]["r"][0]):
+                    out[i]["r"] = [row]
+                continue
+            out[i]["r"].append(row)
     return out
