@@ -1,12 +1,12 @@
 {
  "data": {
-  "version": 2,
+  "version": 3,
   "date": "2026-11-22",
-  "url": "data-2.json.gz",
-  "sha256": "093e99db90aefa6c7300c47aa49528daaccc6f6a261bdf57ff51a21dbbb58454",
-  "size": 1093690,
+  "url": "data-3.json.gz",
+  "sha256": "365314fc5eada03ff6b3a9f5d153b66c8d94793db82d0618b99d0cb1ffb97991",
+  "size": 1087248,
   "summary": [
-   "Résultats, classements et équipes de la saison actualisés"
+   "Classements et fiches actualisés"
   ]
  }
 }
