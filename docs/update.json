@@ -1,12 +1,12 @@
 {
  "data": {
-  "version": 4,
-  "date": "2026-11-22",
-  "url": "data-4.json.gz",
-  "sha256": "072eb0b05ca290960cc2f30f38ec6cc36451754cf7ed0a0740e98a716dba16df",
-  "size": 1085462,
+  "version": 5,
+  "date": "2026-11-23",
+  "url": "data-5.json.gz",
+  "sha256": "264e2937da309ddb55e5a3b085668a9413c281b31041a073d10c841bd47076ea",
+  "size": 1091849,
   "summary": [
-   "Classements et fiches actualisés"
+   "Résultats : Tour Down Under 2017, Paris-Nice 1963, Paris-Nice 1997 et 28 autres"
   ]
  }
 }
