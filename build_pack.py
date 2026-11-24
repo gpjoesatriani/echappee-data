@@ -122,26 +122,43 @@ def nationalities(people) -> dict:
 
 
 def summary(old: dict) -> list[str]:
+    """Ce qui est vraiment nouveau pour un fan : les courses courues depuis le dernier paquet.
+    Les retouches de Wikidata sur des éditions anciennes (date précisée, podium complété)
+    sont seulement comptées, sans les nommer comme des « résultats »."""
     if not old:
         return ["Résultats, classements et équipes de la saison actualisés"]
-    lines, new_results = [], []
+    lines, new_results, fixed = [], [], set()
     for k, now in results.items():
         if not k.startswith("race_editions|"):
             continue
-        was = {tuple(r) for r in old.get(k, {}).get("r", [])}
+        was_rows = old.get(k, {}).get("r", [])
+        was = {tuple(r) for r in was_rows}
+        v = now["v"]
+        won_before = {r[v.index("ed")] for r in was_rows if r[v.index("w")]}
         for r in now["r"]:
-            row = dict(zip(now["v"], r))
-            if tuple(r) not in was and row.get("w") and row.get("edLabel"):
+            if tuple(r) in was:
+                continue
+            row = dict(zip(v, r))
+            if not (row.get("w") and row.get("edLabel")):
+                continue
+            d = (row.get("date") or "")[:10]
+            if row["ed"] not in won_before and RECENT <= d <= TODAY.isoformat():
                 new_results.append(row["edLabel"])
+            else:
+                fixed.add(row["ed"])
     new_results = list(dict.fromkeys(new_results))
     if new_results:
         extra = f" et {len(new_results) - 3} autres" if len(new_results) > 3 else ""
-        lines.append("Résultats : " + ", ".join(new_results[:3]) + extra)
+        lines.append("Nouveaux résultats : " + ", ".join(new_results[:3]) + extra)
     moved = sum(1 for k, now in results.items()
-                if k.startswith("rider_teams|") and k in old and old[k]["r"] != now["r"])
+                if k.startswith("rider_teams|") and k in old
+                and sorted(map(tuple, old[k]["r"])) != sorted(map(tuple, now["r"])))
     if moved:
         lines.append(f"{moved} fiche{'s' if moved > 1 else ''} coureur avec un changement d'équipe")
-    return lines or ["Classements et fiches actualisés"]
+    if fixed:
+        n = len(fixed)
+        lines.append(f"Archives : {n} édition{'s' if n > 1 else ''} corrigée{'s' if n > 1 else ''} ou complétée{'s' if n > 1 else ''} par les bénévoles de Wikidata")
+    return lines or ["Fiches coureurs et classements complétés"]
 
 
 def fingerprint(pack: dict) -> str:
