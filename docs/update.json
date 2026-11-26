@@ -1,12 +1,12 @@
 {
  "data": {
-  "version": 7,
-  "date": "2026-11-25",
-  "url": "data-7.json.gz",
-  "sha256": "4948f4a04cf04118f55aaabccbd691ddca5a1f115e1fec0022c67d6b8d79c52c",
-  "size": 1091958,
+  "version": 8,
+  "date": "2026-11-26",
+  "url": "data-8.json.gz",
+  "sha256": "50517d3f4d55f83cac284e4838c7bcd8a39547ec787142e00923c0f0d53f284d",
+  "size": 1094485,
   "summary": [
-   "Archives : 3 éditions corrigées ou complétées par les bénévoles de Wikidata"
+   "Archives : 9 éditions corrigées ou complétées par les bénévoles de Wikidata"
   ]
  }
 }
