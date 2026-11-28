@@ -1,12 +1,13 @@
 {
  "data": {
-  "version": 9,
-  "date": "2026-11-27",
-  "url": "data-9.json.gz",
-  "sha256": "31297be4be0c8f59b52a7eec679910b16f06eed0c9b2aec1cf020f5ee0f8741f",
-  "size": 1094225,
+  "version": 10,
+  "date": "2026-11-28",
+  "url": "data-10.json.gz",
+  "sha256": "813b86e3aa3410538578f316a3698b585d54ed7d8d9c266bc8f3f9e0b96feacd",
+  "size": 1090669,
   "summary": [
-   "Archives : 6 éditions corrigées ou complétées par les bénévoles de Wikidata"
+   "1 fiche coureur avec un changement d'équipe",
+   "Archives : 27 éditions corrigées ou complétées par les bénévoles de Wikidata"
   ]
  }
 }
